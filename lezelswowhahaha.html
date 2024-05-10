@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezels' - Discover New Fashion Trends</title>
+    <style>
+        /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('https://i.pinimg.com/564x/ee/2a/46/ee2a46dc275f83a25ddc5de6572226f8.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures the background image remains fixed while scrolling */
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #d2b48c; /* Light brown color */
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: rgba(210, 180, 140, 0.7); /* Light brown color */
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(210, 180, 140, 1); /* Light brown color */
+}
+
+/* Hero Section */
+.hero {
+    background-color: #f0e68c; /* Light brown color */
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Section */
+.form-section {
+    background-color: #f5deb3; /* Light brown color */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.form-section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #cd853f; /* Light brown color */
+    text-align: center;
+}
+
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section input[type="tel"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+.form-section input[type="submit"] {
+    background-color: #cd853f; /* Light brown color */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.form-section input[type="submit"]:hover {
+    background-color: #8b4513; /* Darker brown color */
+}
+
+/* Info Box */
+.info-box {
+    background-color: #f5deb3; /* Light brown color */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.info-box h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #cd853f; /* Light brown color */
+}
+
+.info-box p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-item {
+    background-color: #f5deb3; /* Light brown color */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+}
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+
+.product-info {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #cd853f; /* Light brown color */
+}
+
+.product-info .price {
+    font-size: 20px;
+    color: #333;
+}
+
+.product-info .description {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.product-info .btn {
+    margin-top: auto;
+    align-self: center;
+    background-color: #cd853f; /* Light brown color */
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+}
+
+.product-info .btn:hover {
+    background-color: #8b4513; /* Darker brown color */
+}
+
+/* Footer */
+footer {
+    background-color: #d2b48c; /* Light brown color */
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+footer p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #cd853f; /* Light brown color */
+}
+
+ /* Responsive Styles */
+   @media screen and (max-width: 768px) {
+    /* Adjust product item width */
+    .product-item {
+        width: 100%; /* Set product item width to 100% */
+        margin-bottom: 20px; /* Add margin-bottom for spacing */
+    }
+        }
+
+        /* Accessibility Styles */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        main {
+            min-height: calc(100vh - 40px); /* Adjust according to your header and footer height */
+        }
+    </style>
+</head>
+<body>
+    <!-- "Added to Cart" message -->
+    <div id="addedToCartMessage" style="display: none;">Added to Cart</div>
+<header>
+    <div class="container">
+        <div class="logo">Lezels'</div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#login">Sign Up</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<section id="login" class="form-section">
+    <div class="container">
+        <div class="info-box">
+            <h2>Login or Sign Up</h2>
+            <form class="login-form" action="#" method="post">
+                <input type="text" name="firstname" placeholder="First Name">
+                <input type="text" name="lastname" placeholder="Last Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="tel" name="phone" placeholder="Phone Number">
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+    <section id="about" class="container">
+        <div class="info-box">
+            <h2>About Us</h2>
+            <p>Lezels' is your ultimate destination for discovering the latest fashion trends. We offer a wide range of clothing items for men, women, and kids. Our mission is to keep you ahead in style with our curated collection of fashionable apparel.</p>
+            <a href="https://lezelshahhahaha.000webhostapp.com/">Learn more about us</a>
+        </div>
+    </section>
+
+   <section id="shop" class="container">
+    <h2>Shop</h2>
+    <div class="product-grid">
+        <!-- Product 1: Verdusa Women's Long Sleeve Sweetheart Neck Lantern Sleeve Ruched Bust Ruffle Trim Mini Dress -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/564x/46/4e/cf/464ecf9ed274f19f8b4eca54e9d79b2c.jpg" alt="Verdusa Women's Long Sleeve Sweetheart Neck Lantern Sleeve Ruched Bust Ruffle Trim Mini Dress">
+            <div class="product-info">
+                <h3>Verdusa Mini Dress</h3>
+                <p class="price">₱699</p>
+                <p class="description">Long sleeve sweetheart neck mini dress with lantern sleeves, ruched bust, and ruffle trim.</p>
+                <a href="#" class="btn" onclick="addToCart(this.parentElement.parentElement.querySelector('img').alt, parseFloat(this.parentElement.querySelector('.price').innerText.replace(/[^\d.]/g, '')))">Add to Cart</a>
+            </div>
+        </div>
+
+        <!-- Product 2: Pink Floral Gown for Dinner Dates -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/564x/14/00/b1/1400b12b9e7c7494f1e219c9b2c0e8f9.jpg" alt="Pink Floral Gown for Dinner Dates">
+            <div class="product-info">
+                <h3>Pink Floral Dinner Gown</h3>
+                <p class="price">₱899</p>
+                <p class="description">A stunning pink floral gown perfect for elegant dinner dates.</p>
+                <a href="#" class="btn" onclick="addToCart(this.parentElement.parentElement.querySelector('img').alt, parseFloat(this.parentElement.querySelector('.price').innerText.replace(/[^\d.]/g, '')))">Add to Cart</a>
+            </div>
+        </div>
+
+        <!-- Add other products similarly -->
+        <!-- Product 3: Flowered Summer Dresses -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/474x/72/6a/7c/726a7c71c82227d12fd8364ea0487054.jpg" alt="Flowered Summer Dresses">
+            <div class="product-info">
+                <h3>Summer Flowered Dresses</h3>
+                <p class="price">₱599</p>
+                <p class="description">Beautiful flowered dresses perfect for the summer season.</p>
+                <a href="#" class="btn" onclick="addToCart(this.parentElement.parentElement.querySelector('img').alt, parseFloat(this.parentElement.querySelector('.price').innerText.replace(/[^\d.]/g, '')))">Add to Cart</a>
+            </div>
+        </div>
+
+        <!-- Product 4: One Piece Tie Skirt High Waist Solid Ruffle Skirt -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/62/1a/0a/621a0a8d2fd6249f8be18877b9b0b596.jpg" alt="One Piece Tie Skirt High Waist Solid Ruffle Skirt">
+            <div class="product-info">
+                <h3>High Waist Ruffle Skirt</h3>
+                <p class="price">₱499</p>
+                <p class="description">Tie skirt with high waist and solid ruffle design, a versatile piece for any occasion.</p>
+                <a href="#" class="btn" onclick="addToCart(this.parentElement.parentElement.querySelector('img').alt, parseFloat(this.parentElement.querySelector('.price').innerText.replace(/[^\d.]/g, '')))">Add to Cart</a>
+            </div>
+        </div>
+
+        <!-- Add other products similarly -->
+        <!-- Product 5: Falda -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/564x/b9/6c/ea/b96ceab9d6821d21cdb5734a4482b707.jpg" alt="Falda">
+            <div class="product-info">
+                <h3>Falda</h3>
+                <p class="price">₱399</p>
+                <p class="description">Stylish skirt with a comfortable fit, perfect for casual outings.</p>
+                <a href="#" class="btn" onclick="addToCart(this.parentElement.parentElement.querySelector('img').alt, parseFloat(this.parentElement.querySelector('.price').innerText.replace(/[^\d.]/g, '')))">Add to Cart</a>
+            </div>
+        </div>
+
+        <!-- Add other products similarly -->
+        <!-- Product 6: Green Skirt -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/564x/62/c9/19/62c9192aaa38653b10adf9d73aa20b27.jpg" alt="Green Skirt">
+            <div class="product-info">
+                <h3>Green Skirt</h3>
+                <p class="price">₱349</p>
+                <p class="description">A trendy green skirt that adds a pop of color to your outfit.</p>
+                <a href="#" class="btn" onclick="addToCart(this.parentElement.parentElement.querySelector('img').alt, parseFloat(this.parentElement.querySelector('.price').innerText.replace(/[^\d.]/g, '')))">Add to Cart</a>
+            </div>
+        </div>
+
+        <!-- Add other products similarly -->
+        <!-- Product 7: Foldover Off The Shoulder Knitwear -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/564x/8c/0d/9d/8c0d9d48827409465dd89ed772c4e9dc.jpg" alt="Foldover Off The Shoulder Knitwear">
+            <div class="product-info">
+                <h3>Off The Shoulder Knitwear</h3>
+                <p class="price">₱299</p>
+                <p class="description">Foldover off the shoulder knitwear for a chic and comfortable look.</p>
+                <a href="#" class="btn" onclick="addToCart(this.parentElement.parentElement.querySelector('img').alt, parseFloat(this.parentElement.querySelector('.price').innerText.replace(/[^\d.]/g, '')))">Add to Cart</a>
+            </div>
+        </div>
+
+        <!-- Add other products similarly -->
+        <!-- Product 8: Red Wine T-shirt -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/736x/9c/56/d8/9c56d8035b5524746ab3caa6e631f346.jpg" alt="Red Wine T-shirt">
+            <div class="product-info">
+                <h3>Red Wine T-shirt</h3>
+                <p class="price">₱199</p>
+                <p class="description">Comfortable red wine-themed t-shirt, perfect for casual wear.</p>
+                <a href="#" class="btn" onclick="addToCart(this.parentElement.parentElement.querySelector('img').alt, parseFloat(this.parentElement.querySelector('.price').innerText.replace(/[^\d.]/g, '')))">Add to Cart</a>
+            </div>
+        </div>
+
+        <!-- Add other products similarly -->
+        <!-- Product 9: White Polo -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/564x/7a/20/6e/7a206e722b08df60ede76f7fc39e9f7a.jpg" alt="White Polo">
+            <div class="product-info">
+                <h3>White Polo</h3>
+                <p class="price">₱249</p>
+                <p class="description">Classic white polo shirt for a timeless and sophisticated look.</p>
+                <a href="#" class="btn" onclick="addToCart(this.parentElement.parentElement.querySelector('img').alt, parseFloat(this.parentElement.querySelector('.price').innerText.replace(/[^\d.]/g, '')))">Add to Cart</a>
+            </div>
+        </div>
+
+        <!-- Add other products similarly -->
+        <!-- Product 10: White Shorts -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/564x/ad/1c/3e/ad1c3e60cae96e1a094c4c0a4361a5d9.jpg" alt="White Shorts">
+            <div class="product-info">
+                <h3>White Shorts</h3>
+                <p class="price">₱149</p>
+                <p class="description">Versatile white shorts that can be dressed up or down for any occasion.</p>
+                <a href="#" class="btn" onclick="addToCart(this.parentElement.parentElement.querySelector('img').alt, parseFloat(this.parentElement.querySelector('.price').innerText.replace(/[^\d.]/g, '')))">Add to Cart</a>
+            </div>
+        </div>
+
+        <!-- Add other products similarly -->
+        <!-- Product 11: Black Shorts -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/564x/7c/bc/df/7cbcdf91098b720ae0ae6eda084946df.jpg" alt="Black Shorts">
+            <div class="product-info">
+                <h3>Black Shorts</h3>
+                <p class="price">₱149</p>
+                <p class="description">Classic black shorts for a sleek and stylish look, perfect for everyday wear.</p>
+                <a href="#" class="btn" onclick="addToCart(this.parentElement.parentElement.querySelector('img').alt, parseFloat(this.parentElement.querySelector('.price').innerText.replace(/[^\d.]/g, '')))">Add to Cart</a>
+            </div>
+        </div>
+
+        <!-- Add other products similarly -->
+        <!-- Product 12: Black Skirt -->
+        <div class="product-item">
+            <img src="https://i.pinimg.com/564x/86/f9/7c/86f97cb60f226ab5da478a1c6deeed38.jpg" alt="Black Skirt">
+            <div class="product-info">
+                <h3>Black Skirt</h3>
+                <p class="price">₱299</p>
+                <p class="description">A versatile black skirt that can be dressed up or down for any occasion.</p>
+                <a href="#" class="btn" onclick="addToCart(this.parentElement.parentElement.querySelector('img').alt, parseFloat(this.parentElement.querySelector('.price').innerText.replace(/[^\d.]/g, '')))">Add to Cart</a>
+            </div>
+        </div>
+
+        <!-- Add other products similarly -->
+
+    </div>
+</section>
+
+
+
+  <footer id="contact">
+        <div class="container">
+            <p>Contact us at <a href="mailto:lezels@gmail.com">lezels@gmail.com</a></p>
+            <p>&copy; 2024 Lezels'. All rights reserved.</p>
+        </div>
+    </footer>
+
+<script>
+    // JavaScript code
+    // Function to handle "Add to Cart" button click
+    function addToCart(productName, price) {
+        // Show "Added to Cart" message
+        document.getElementById("addedToCartMessage").style.display = "block";
+        setTimeout(function() {
+            document.getElementById("addedToCartMessage").style.display = "none";
+        }, 2000); // Hide the message after 2 seconds
+    }
+</script>
+</body>
+</html>
